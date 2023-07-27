@@ -6,6 +6,7 @@ This is a Python library that allows you to simultaneously generate audio and su
 * Supports all Polly audio formats (PCM, OGG, MP3)
 * Supports both VTT and SRT subtitle/captioning formats
 * Supports all Polly `synthesize_speech` parameters
+* ssml
 
 ## Installation
 The library is not yet deployed to Github, so for now clone and install from local.

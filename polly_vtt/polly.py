@@ -12,6 +12,7 @@ class Polly:
             "LanguageCode": "en-US",
             "OutputFormat": "pcm",
             "SampleRate": "16000",
+            "TextType": "ssml",
         }
 
     def connect(self):
@@ -48,7 +49,8 @@ class Polly:
 
     def synthesize_speech_marks(self, **params):
         params["OutputFormat"] = "json"
-        params["SpeechMarkTypes"] = ("sentence",)
+        params["SpeechMarkTypes"] = ("ssml","sentence")
+        params["TextType"] = "ssml"
         request_params = {**self.defaults, **params}
         return self.client.synthesize_speech(**request_params)
 
